@@ -1,0 +1,11 @@
+<p>home works!</p>
+<div class="container">
+    <div class="row">
+        <app-pai></app-pai>
+    </div>
+    <div class="row">
+        <app-filho
+        [recebeFamilia]="familia" 
+        (respostaFamilia)="reciverFeedback($event)"></app-filho>
+    </div>
+</div>
