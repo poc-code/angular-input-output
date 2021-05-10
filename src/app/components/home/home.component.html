@@ -5,7 +5,25 @@
     </div>
     <div class="row">
         <app-filho
-        [recebeFamilia]="familia" 
+        [recebeFamilia]="pessoas" 
         (respostaFamilia)="reciverFeedback($event)"></app-filho>
+    </div>
+    <div>
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>SobreNome</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of familia; let i=index">
+                        <td>{{i}}</td>
+                        <td>{{item.nome}}</td>
+                        <td>{{item.sobreNome}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

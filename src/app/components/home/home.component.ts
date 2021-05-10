@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Pessoa } from 'src/app/models/pessoa';
+import { PessoaService } from 'src/app/services/pessoa.service';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +10,10 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   familia: Object[];
+  pessoas = {} as Pessoa[];
 
-  constructor() { 
+  constructor(private _service : PessoaService) {
+    this.pessoas = _service.buscarPessoas(); 
 
     this.familia = [
       {
