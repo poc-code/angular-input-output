@@ -11,8 +11,8 @@ export class PessoaService {
 
   constructor() {
     this.pessoas = [
-      {Id: 1, Nome: 'John Doe', Email: 'johndoe@test.com', Ativo: true},
-      {Id: 2, Nome: 'Jane Doe', Email: 'janedoe@test.com', Ativo: true}
+      {Id: 1, Nome: 'John Doe', Email: 'johndoe@test.com', Ativo: true, Img: 'https://picsum.photos/200'},
+      {Id: 2, Nome: 'Jane Doe', Email: 'janedoe@test.com', Ativo: true, Img: 'https://picsum.photos/100'}
     ]
    }
 

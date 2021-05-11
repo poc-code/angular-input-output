@@ -10,10 +10,11 @@ import { PessoaService } from 'src/app/services/pessoa.service';
 export class FilhoComponent implements OnInit {
   @Input() recebeFamilia;
   @Output() respostaFamilia = new EventEmitter();
+  @Input() idPessoa : number = 1;
 
   pessoa = {} as Pessoa;
   constructor(private _service : PessoaService) {
-    this.pessoa = _service.buscarPessoa(1);
+    this.pessoa = _service.buscarPessoa(this.idPessoa);
    }
 
    ngOnInit() {

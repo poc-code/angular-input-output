@@ -3,4 +3,5 @@ export interface Pessoa {
     Nome : string;
     Email : string;
     Ativo : boolean;
+    Img : string;
 }

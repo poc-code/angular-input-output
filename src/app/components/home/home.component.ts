@@ -9,30 +9,15 @@ import { PessoaService } from 'src/app/services/pessoa.service';
 })
 export class HomeComponent implements OnInit {
 
-  familia: Object[];
   pessoas = {} as Pessoa[];
+  pessoa = {} as Pessoa[];
 
   constructor(private _service : PessoaService) {
     this.pessoas = _service.buscarPessoas(); 
-
-    this.familia = [
-      {
-        nome: 'Vitor',
-        sobreNome: 'Borges'
-      },
-      {
-        nome: 'Emerson',
-        sobreNome: 'Daniel'
-      },
-      {
-        nome: 'Thiago',
-        sobreNome: 'Contre!'
-      }
-    ];
   }
 
   ngOnInit(): void {
-    console.log(this.familia);
+    console.log(this.pessoas);
   }
 
   recebeMensagemDoFilho(){
